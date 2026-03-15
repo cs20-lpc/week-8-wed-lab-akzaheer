@@ -73,4 +73,17 @@ double gRec(unsigned i) {
 
 double gStack(unsigned i) {
     // TODO
+    ArrayStack<unsigned> s;         // create the  stack
+    while(i>0){                 // reducce till base case
+        s.push(i);      // make sure to add each number to the stack
+        i--;
+    }
+    cout << "Base case!\n";     // say base case 
+    double answer = 3.2;      // make sure answer is 3.2 as base
+
+    while (!s.isEmpty()){                     
+        s.pop();                    // do the recursion  by poping it 1 by 1 and adding it to total answer
+        answer += 1.1;
+    }
+    return answer;          // return it obv
 }
